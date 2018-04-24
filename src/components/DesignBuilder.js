@@ -12,9 +12,9 @@ class DesignBuilder extends Component {
             <Design />
           </div>
           <div className="col s4">
-            <Layer />
-            <Layer />
-            <Layer />
+            <Layer index="1" />
+            <Layer index="2" />
+            <Layer index="3" />
           </div>
         </div>
       </section>
