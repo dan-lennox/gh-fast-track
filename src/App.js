@@ -11,7 +11,7 @@ class App extends Component {
       <MuiThemeProvider>
         <div className="container">
           <header>
-            <h1>GFH Fast Track</h1>
+            <h2>GFH Fast Track</h2>
           </header>
           <DesignBuilder />
         </div>

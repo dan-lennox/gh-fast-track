@@ -21,6 +21,7 @@ class Layer extends Component {
 
   render() {
     return (
+      <div>
       <SelectField
         floatingLabelText={ `Layer ${this.props.index}` }
         value={this.state.value}
@@ -39,11 +40,17 @@ class Layer extends Component {
         <MenuItem value={'#200f0c'} style={{ backgroundColor: '#200f0c', color: '#fff' }} primaryText="F644L" />
         <MenuItem value={'#000000'} style={{ backgroundColor: '#000000', color: '#fff' }} primaryText="Black" />
       </SelectField>
+      <div className="swatch" style={{
+        width: '50px',
+        height: '50px',
+        backgroundColor: this.state.value
+      }}>
+      </div>
+      </div>
     );
   }
 }
 
-// Using object destructuring.
 function mapStateToProps({ colours }) {
   return { colours };
 }
