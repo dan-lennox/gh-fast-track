@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 class Layer extends Component {
 
   state = {
-    value: 1,
+    value: this.props.colours[this.props.index],
   };
 
   handleChange = (event, index, value) => {
-    console.log(value);
     this.setState({value});
-  }
+
+    let colours = this.props.colours;
+    colours[this.props.index] = value;
+
+    this.props.updateColours(colours);
+  };
 
   render() {
     return (
@@ -37,4 +43,9 @@ class Layer extends Component {
   }
 }
 
-export default Layer;
+// Using object destructuring.
+function mapStateToProps({ colours }) {
+  return { colours };
+}
+
+export default connect(mapStateToProps, actions)(Layer);
