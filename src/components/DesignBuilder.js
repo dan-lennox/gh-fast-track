@@ -8,10 +8,15 @@ class DesignBuilder extends Component {
     return (
       <section className="section">
         <div className="row">
-          <div className="col s8">
+          <div>
             <Design />
           </div>
-          <div className="col s4">
+          <div className="col s4" style={{
+            padding: '20px',
+            marginTop: '40px',
+            backgroundColor: '#fff',
+            borderRadius: '10px'
+          }}>
             <Layer index={0} />
             <Layer index={1} />
             <Layer index={2} />

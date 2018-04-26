@@ -10,8 +10,15 @@ class Design extends Component {
 
   render() {
     return (
-      <section className="section">
-        <img src={ this.props.cloudinaryUrl } alt="Test Fastrack Pattern" style={{ backgroundColor: 'black' }} />
+      <section className="section" style={{
+        backgroundImage: 'url(' + this.props.cloudinaryUrl + ')',
+        width: '100%',
+        height: '100%',
+        position: 'absolute',
+        left: 0,
+        zIndex: '-1'
+      }}>
+        {/*<img src={ this.props.cloudinaryUrl } alt="Test Fastrack Pattern" style={{ backgroundColor: 'black' }} />*/}
       </section>
     );
   }
