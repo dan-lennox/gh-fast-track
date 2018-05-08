@@ -30,7 +30,7 @@ export const updateCloudinaryUrl = (colours) => async dispatch => {
     {color: colours[0], effect: "colorize:100"},
     {color: colours[1], effect: "colorize:100", overlay: "MOI-2016-0659A_f8_rcvosy"},
     {color: colours[2], effect: "colorize:100", overlay: "MOI-2016-0659A_f1_ze1rsc"},
-    {effect: "multiply", overlay: "test_greige-loop_b6ezuw", opacity: 100}
+    {effect: "multiply", flags: ["relative", "tiled"], overlay: "test_greige-loop_b6ezuw", opacity: 100}
   ]});
 
 
