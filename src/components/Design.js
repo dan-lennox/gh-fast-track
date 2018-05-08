@@ -16,7 +16,8 @@ class Design extends Component {
         height: '100%',
         position: 'absolute',
         left: 0,
-        zIndex: '-1'
+        zIndex: '-1',
+        backgroundSize: '650px 650px'
       }}>
         {/*<img src={ this.props.cloudinaryUrl } alt="Test Fastrack Pattern" style={{ backgroundColor: 'black' }} />*/}
       </section>
